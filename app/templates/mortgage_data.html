@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Here's the biggest mortgage you can</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+	</head>
+	<body>
+		<div class="page">
+			<h2>Here's your data!<h2>
+				{% for o in mortgage_data %}
+				<p>Your income: {{ o.income }}</p>
+				<br>
+				<p>Your down payment: {{ o.down_payment }}</p>
+				<br>
+				<p>Your interest rate: {{ o.interest_rate }}</p>
+				<p>Your Biggest mortgage equals: {{ (((o.income/4)/(o.interest_rate*1000)*10000) + o.down_payment) }}
+				{% endfor %}
+		</div>
+	</body>

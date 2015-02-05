@@ -1,0 +1,19 @@
+{% extends "template.html" %}
+{% block content %}
+	<h1>Welcome to Mortgage Calculator</h1>
+	<div class="enter your info">
+		<h3>Enter your information:</h3>
+		<table>
+			<tr>
+				<form action="{{ url_for('mort_calc') }}" method="post">
+					<td>
+						<label>Monthly Income:</label>
+						<input name="income" type="integer">
+					</td>
+					<td>
+						<label>Down Payment:</label>
+						<input name="down_payment" type="integer">
+					</td>
+					<td>
+						<label>Interest rest:</label>
+						<select name=""

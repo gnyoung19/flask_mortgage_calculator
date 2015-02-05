@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Welcome to the Mortgage Calc!</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+	</head>
+	<body>
+		<div class="page">
+		<h3>Enter your information to calculate the biggest mortgage you can afford.</h3>
+		<br>
+		<table>
+			<tr>
+				<form action="{{ url_for('mort_data_gather') }}" method="post">
+					<td>
+						<label>Monthly Income:</label>
+						<input name="income" type="integer">
+					</td>
+					
+					<td>
+						<label>Down payment:</label>
+						<input name="down_payment" type="integer">
+					</td>
+					
+					<td>
+						<label>Interest Rate:</label>
+						<input name="interest_rate" type="integer">
+					</td>
+					<td>
+						&nbsp;
+						&nbsp;
+						<input class="button" type="submit" value="Get my mortgage!">
+					</td>
+				</form>
+			</tr>
+		</table>
+		<br>
+		<br>
+		<p>Remember, all your information is secure with us!</p>
+	</div>
+	</body>
+</html>
